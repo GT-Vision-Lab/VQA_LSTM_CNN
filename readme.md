@@ -29,7 +29,7 @@ The first thing you need to do is download the data and do some preprocessing. H
 $ python vqa_preprocessing.py --download True --split 1
 ```
 
-`--download Ture` means you choose download the VQA data from the [websit](http://www.visualqa.org/) and `--split 1` means you use COCO train set to train and validation set to evaluation. `--split 2 ` means you use COCO train+val set to train and test set to evaluation. 
+`--download Ture` means you choose download the VQA data from the [VQA website](http://www.visualqa.org/) and `--split 1` means you use COCO train set to train and validation set to evaluation. `--split 2 ` means you use COCO train+val set to train and test set to evaluation. 
 
 After this step, it will generate two files under the `data/` folder. `vqa_raw_train.json` and `vqa_raw_test.json`
 
