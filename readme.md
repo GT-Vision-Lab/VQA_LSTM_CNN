@@ -11,7 +11,7 @@ This code is written in Lua and requires [Torch](http://torch.ch/). The preprocs
 
 We have prepare everything for you. 
 
-If you want to train on **train set** and evaluate on **validation set**, you can download the feature from [here](), and the pretrained model from [here](), put it under the main folder, run. 
+If you want to train on **train set** and evaluate on **validation set**, you can download the feature from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_only/data_train_val.zip), and the pretrained model from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_only/pretrained_lstm_train_val.t7.zip), put it under the main folder, run. 
 
 ```
 $ th eval.lua -input_img_h5 data_img.h5 -input_ques_h5 data_prepro.h5 -input_json data_prepro.h5 -model_path model/lstm.t7
