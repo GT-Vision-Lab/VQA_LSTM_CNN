@@ -9,7 +9,7 @@ This code is written in Lua and requires [Torch](http://torch.ch/). The preprocs
 
 ### Evaluation
 
-We have prepare everything for you. 
+We have prepared everything for you. 
 
 If you want to train on **train set** and evaluate on **validation set**, you can download the feature from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_only/data_train_val.zip), and the pretrained model from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_only/pretrained_lstm_train_val.t7.zip), put it under the main folder, run 
 
