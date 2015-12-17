@@ -1,6 +1,6 @@
 # Deeper LSTM+ normalized CNN for Visual Question Answering
 
-Train a deeper LSTM and normalized CNN Visual Question Answering model. This current code can get **58.16** on OpenEnded and **63.09** on Multiple-Choice on **test-standard** split. You can check [Codealab leaderboard](https://competitions.codalab.org/competitions/6961#results) for more details.
+Train a deeper LSTM and normalized CNN Visual Question Answering model. This current code can get **58.16** on Open-Ended and **63.09** on Multiple-Choice on **test-standard** split. You can check [Codealab leaderboard](https://competitions.codalab.org/competitions/6961#results) for more details.
 
 
 ### Requirments
