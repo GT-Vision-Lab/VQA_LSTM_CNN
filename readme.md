@@ -19,7 +19,7 @@ $ th eval.lua -input_img_h5 data_img.h5 -input_ques_h5 data_prepro.h5 -input_jso
 
 This will generate the answer json file both on Open-Ended and Multiple-Choice. To evaluate the accuracy of generate result, you need download the [VQA evaluation tools](https://github.com/VT-vision-lab/VQA).
 
-If you want to train on **train + validation set** and evaluate on **test set**, you can download the feature from [here](), and the pretrained model from [here](). The rest is the same as previous one, except you need to evaluate the generated results on [testing server](http://www.visualqa.org/challenge.html).
+If you want to train on **train + validation set** and evaluate on **test set**, you can download the feature from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_val/data_train-val_test.zip), and the pretrained model from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_val/pretrained_lstm_train-val_test). The rest is the same as previous one, except you need to evaluate the generated results on [testing server](http://www.visualqa.org/challenge.html).
 
 ### Training
 
