@@ -30,7 +30,7 @@ def download_vqa():
 
 
 def main(params):
-    if params['download'] == True:
+    if params['download'] == 'True':
         download_vqa()
 
     '''
@@ -122,7 +122,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     # input json
-    parser.add_argument('--download', default=False, help='Download and extract data from VQA server')
+    parser.add_argument('--download', default='False', help='Download and extract data from VQA server')
     parser.add_argument('--split', default=1, type=int, help='1: train on Train and test on Val, 2: train on Train+Val and test on Test')
   
     args = parser.parse_args()
