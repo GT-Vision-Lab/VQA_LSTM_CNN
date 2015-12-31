@@ -3,7 +3,7 @@
 Train a deeper LSTM and normalized CNN Visual Question Answering model. This current code can get **58.16** on Open-Ended and **63.09** on Multiple-Choice on **test-standard** split. You can check [Codalab leaderboard](https://competitions.codalab.org/competitions/6961#results) for more details.
 
 
-### Requirments
+### Requirements
 
 This code is written in Lua and requires [Torch](http://torch.ch/). The preprocssinng code is in Python, and you need to install [NLTK](http://www.nltk.org/) if you want to use NLTK to tokenize the question.
 
