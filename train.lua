@@ -305,8 +305,8 @@ for iter = 1, opt.max_iters do
 	
 	optimize.learningRate=optimize.learningRate*decay_factor 
 	if iter%50 == 0 then -- change this to smaller value if out of the memory
-      collectgarbage()
-   end
+		collectgarbage()
+	end
 end
 
 -- Saving the final model
