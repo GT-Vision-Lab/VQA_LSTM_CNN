@@ -304,6 +304,10 @@ for iter = 1, opt.max_iters do
 	optim.rmsprop(JdJ, optimize.winit, optimize, state)
 	
 	optimize.learningRate=optimize.learningRate*decay_factor 
+	if i%50 == 0 then -- change this to smaller value if out of the memory
+        	collectgarbage()
+        end
+    end
 end
 
 -- Saving the final model
