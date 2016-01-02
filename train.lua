@@ -294,6 +294,7 @@ end
 local state={}
 for iter = 1, opt.max_iters do
 	if iter%opt.save_checkpoint_every == 0 then
+		paths.mkdir(model_path..'save')
 		torch.save(string.format(model_path..'save/lstm_save_iter%d.t7',iter),
 			{encoder_w_q=encoder_w_q,embedding_w_q=embedding_w_q,multimodal_w=multimodal_w}) 
 	end

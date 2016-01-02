@@ -18,8 +18,6 @@ import h5py
 from nltk.tokenize import word_tokenize
 import json
 
-import caffe
-
 import re
 def tokenize(sentence):
     return [i for i in re.split(r"([-.\"',:? !\$#@~()*&\^%;\[\]/\\\+<>\n=])", sentence) if i!='' and i!=' ' and i!='\n'];
