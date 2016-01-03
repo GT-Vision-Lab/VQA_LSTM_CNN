@@ -14,7 +14,7 @@ We have prepared everything for you.
 If you want to train on **train set** and evaluate on **validation set**, you can download the features from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_only/data_train_val.zip), and the pretrained model from [here](https://filebox.ece.vt.edu/~jiasenlu/codeRelease/vqaRelease/train_only/pretrained_lstm_train_val.t7.zip), put it under the main folder, run 
 
 ```
-$ th eval.lua -input_img_h5 data_img.h5 -input_ques_h5 data_prepro.h5 -input_json data_prepro.h5 -model_path model/lstm.t7
+$ th eval.lua -input_img_h5 data_img.h5 -input_ques_h5 data_prepro.h5 -input_json data_prepro.json -model_path model/lstm.t7
 ```
 
 This will generate the answer json file both on Open-Ended and Multiple-Choice. To evaluate the accuracy of generate result, you need to download the [VQA evaluation tools](https://github.com/VT-vision-lab/VQA).

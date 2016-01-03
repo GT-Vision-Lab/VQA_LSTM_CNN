@@ -35,7 +35,7 @@ cmd:option('-num_output', 1000, 'number of output answers')
 cmd:option('-img_norm', 1, 'normalize the image feature. 1 = normalize, 0 = not normalize')
 
 cmd:option('-backend', 'cudnn', 'nn|cudnn')
-cmd:option('-gpuid', 7, 'which gpu to use. -1 = use CPU')
+cmd:option('-gpuid', 0, 'which gpu to use. -1 = use CPU')
 
 opt = cmd:parse(arg)
 print(opt)
@@ -247,6 +247,7 @@ for i=1,nqs do
 	table.insert(response,{question_id=qids[i],answer=json_file['ix_to_ans'][tostring(pred[{i,1}])]})
 end
 
+paths.mkdir(opt.out_path)
 saveJson(opt.out_path .. 'OpenEnded_mscoco_lstm_results.json',response);
 
 mc_response={};
