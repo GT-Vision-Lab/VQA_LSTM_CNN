@@ -25,9 +25,8 @@ cmd:option('-model_path', 'model/lstm.t7', 'path to a model checkpoint to initia
 cmd:option('-out_path', 'result/', 'path to save output json file')
 
 -- Model parameter settings (shoud be the same with the training)
-cmd:option('-backend', 'nn', 'nn|cudnn')
 cmd:option('-batch_size',500,'batch_size for each iterations')
-cmd:option('-input_encoding_size', 200, 'he encoding size of each token in the vocabulary')
+cmd:option('-input_encoding_size', 200, 'the encoding size of each token in the vocabulary')
 cmd:option('-rnn_size',512,'size of the rnn in number of hidden nodes in each layer')
 cmd:option('-rnn_layer',2,'number of the rnn layer')
 cmd:option('-common_embedding_size', 1024, 'size of the common embedding vector')
