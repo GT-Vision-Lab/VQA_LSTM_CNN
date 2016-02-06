@@ -35,19 +35,8 @@ net=loadcaffe.load(opt.cnn_proto, opt.cnn_model,opt.backend);
 net:evaluate()
 net=net:cuda()
 
-imloader={}
-function imloader:load(fname)
-    self.im="rip"
-    if not pcall(function () self.im=image.load(fname); end) then
-        if not pcall(function () self.im=image.loadPNG(fname); end) then
-            if not pcall(function () self.im=image.loadJPG(fname); end) then
-            end
-        end
-    end
-end
 function loadim(imname)
-    imloader:load(imname)
-    im=imloader.im
+    im=image.load(imname)
     im=image.scale(im,224,224)
     if im:size(1)==1 then
         im2=torch.cat(im,im,1)
