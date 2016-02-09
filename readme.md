@@ -49,7 +49,7 @@ Here we use VGG_ILSVRC_19_layers [model](https://gist.github.com/ksimonyan/37851
 $ th train.lua
 ``` 
 
-with the default parameter, this will take about 12 hours on a sinlge Tesla k40 GPU, and will generate the model under `model/save/`
+with the default parameter, this will take several hours on a sinlge Tesla k40 GPU, and will generate the model under `model/save/`
 
 ### Contributor
 Jiasen Lu
