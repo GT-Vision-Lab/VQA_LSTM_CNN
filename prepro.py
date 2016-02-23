@@ -80,7 +80,7 @@ def apply_vocab_question(imgs, wtoi):
     # apply the vocab on test.
     for img in imgs:
         txt = img['processed_tokens']
-        question = [w if wtoi.get(w,len(wtoi)) != len(wtoi) else 'UNK' for w in txt]
+        question = [w if wtoi.get(w,len(wtoi)+1) != (len(wtoi)+1) else 'UNK' for w in txt]
         img['final_question'] = question
 
     return imgs
@@ -142,7 +142,7 @@ def encode_mc_answer(imgs, atoi):
 def filter_question(imgs, atoi):
     new_imgs = []
     for i, img in enumerate(imgs):
-        if atoi.get(img['ans'],len(atoi)) != len(atoi):
+        if atoi.get(img['ans'],len(atoi)+1) != len(atoi)+1:
             new_imgs.append(img)
 
     print 'question number reduce from %d to %d '%(len(imgs), len(new_imgs))
