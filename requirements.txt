@@ -1,0 +1,19 @@
+# Make sure you have libpng-dev, libimread-dev and tiffio installed
+# before installing the pillow library, and make sure you have
+# pillow installed before installing SciPy.
+# 
+# VQA uses the function scipy.misc.imread . If you install SciPy without
+# pillow previously installed, SciPy silent modifies the scipy.misc
+# module, and the imread function is not available.
+# If you're in that state, you should uninstall scipy, install pillow,
+# and then reinstall. It's best to tell pip not to use the cache when
+# you reinstall, to make sure the library rebuilds:
+# 
+# pip uninstall scipy
+# pip install --no-cache-dir scipy
+
+numpy
+scipy >= 0.17
+imread
+nltk
+h5py
