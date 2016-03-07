@@ -7,6 +7,32 @@ Train a deeper LSTM and normalized CNN Visual Question Answering model. This cur
 
 This code is written in Lua and requires [Torch](http://torch.ch/). The preprocssinng code is in Python, and you need to install [NLTK](http://www.nltk.org/) if you want to use NLTK to tokenize the question.
 
+### Ubuntu installation
+
+Installation on other platforms is likely similar, although the command won't be `apt-get`, and the names of the system packages may be different.
+
+```bash
+sudo apt-get install libpng-dev libtiffio-dev libhdf5-dev
+pip install pillow
+pip install -r requirements.txt
+python -c "import nltk; nltk.download('all')"
+```
+
+### Troubleshooting the prepro.py installation
+
+If when running `prepro.py` you get the error:
+
+```AttributeError: 'module' object has no attribute 'imread'```
+
+Then this means that you're missing the Python library `pillow`. Confusingly, `scipy` rewrites its `scipy.misc` module
+depending on what modules are available when the library was installed. To fix it, do:
+
+```bash
+pip uninstall scipy
+pip install pillow
+pip install --no-cache-dir scipy
+```
+
 ### Evaluation
 
 We have prepared everything for you. 
