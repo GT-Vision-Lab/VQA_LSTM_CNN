@@ -17,8 +17,7 @@ import string
 import h5py
 from nltk.tokenize import word_tokenize
 import json
-from spacy.tokenizer import Tokenizer as SpacyTokenizer
-from spacy.vocab import Vocab as SpacyVocab
+import spacy.en 
 
 import re
 
@@ -256,7 +255,8 @@ if __name__ == "__main__":
     parser.add_argument('--max_length', default=26, type=int, help='max length of a caption, in number of words. captions longer than this get clipped.')
     parser.add_argument('--word_count_threshold', default=0, type=int, help='only words that occur more than this number of times will be put in vocab')
     parser.add_argument('--num_test', default=0, type=int, help='number of test images (to withold until very very end)')
-    parser.add_argument('--token_method', default='nltk', help='token method, nltk is much more slower.')
+    parser.add_argument('--token_method', default='nltk', help='token method. set "spacy" for unigram paraphrasing')
+    parser.add_argument('--spacy_data', default='spacy_data', help='location of spacy NLP model')
 
     parser.add_argument('--batch_size', default=10, type=int)
 
