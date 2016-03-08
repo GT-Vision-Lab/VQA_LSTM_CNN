@@ -77,10 +77,6 @@ $ th train.lua
 
 with the default parameter, this will take several hours on a sinlge Tesla k40 GPU, and will generate the model under `model/save/`
 
-### Contributor
-Jiasen Lu
-
-Xiao Lin
 
 ### License
 
