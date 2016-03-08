@@ -39,8 +39,6 @@ def main(params):
     input_train_json = json.load(open(params['input_train_json'], 'r'))
     print("Load spaCy with GloVe vectors")
     nlp = spacy.load('en', vectors='en_glove_cc_300_1m_vectors')
-    nlp = spacy.en.English(data_dir=params['spacy_data'],
-                           parser=False, tagger=False, entity=False)
     words_to_keep = build_vocab(
                         nlp.tokenizer,
                         [img['question'] for img in input_train_json],
@@ -73,11 +71,10 @@ def main(params):
     if not os.path.exists(os.path.join(params['spacy_data'], 'tokenizer')):
         os.mkdir(os.path.join(params['spacy_data'], 'tokenizer'))
 
-    
     nlp.vocab.dump(os.path.join(params['spacy_data'], 'vocab', 'lexemes.bin'))
-    with io.open(os.path.join(params['spacy_data'], 'vocab', 'strings.json'),
+    with io.open(os.path.join(params['spacy_data'], 'vocab', 'strings.json'), 'w',
             encoding='utf8') as file_:
-        spacy.vocab.strings.dump(file_)
+        nlp.vocab.strings.dump(file_)
 
 
 if __name__ == '__main__':
