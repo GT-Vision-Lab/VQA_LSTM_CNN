@@ -1,7 +1,7 @@
 """
 Preoricess a raw json dataset into hdf5/json files.
 
-Caption: Use NLTK or split function to get tokens. 
+Caption: Use spaCy or NLTK or split function to get tokens. 
 """
 import copy
 from random import shuffle, seed
@@ -17,8 +17,11 @@ import string
 import h5py
 from nltk.tokenize import word_tokenize
 import json
+import spacy.en 
 
 import re
+
+
 def tokenize(sentence):
     return [i for i in re.split(r"([-.\"',:? !\$#@~()*&\^%;\[\]/\\\+<>\n=])", sentence) if i!='' and i!=' ' and i!='\n'];
 
@@ -30,6 +33,8 @@ def prepro_question(imgs, params):
         s = img['question']
         if params['token_method'] == 'nltk':
             txt = word_tokenize(str(s).lower())
+        elif params['token_method'] == 'spacy':
+            txt = [token.norm_ for token in params['spacy'](s)]
         else:
             txt = tokenize(s)
         img['processed_tokens'] = txt
@@ -164,7 +169,11 @@ def get_unqiue_img(imgs):
 
     return unique_img, img_pos
 
+
 def main(params):
+    if params['token_method'] == 'spacy':
+        print 'loading spaCy tokenizer for NLP'
+        params['spacy'] = spacy.en.English(data_dir=params['spacy_data'])
 
     imgs_train = json.load(open(params['input_train_json'], 'r'))
     imgs_test = json.load(open(params['input_test_json'], 'r'))
@@ -246,7 +255,8 @@ if __name__ == "__main__":
     parser.add_argument('--max_length', default=26, type=int, help='max length of a caption, in number of words. captions longer than this get clipped.')
     parser.add_argument('--word_count_threshold', default=0, type=int, help='only words that occur more than this number of times will be put in vocab')
     parser.add_argument('--num_test', default=0, type=int, help='number of test images (to withold until very very end)')
-    parser.add_argument('--token_method', default='nltk', help='token method, nltk is much more slower.')
+    parser.add_argument('--token_method', default='nltk', help='token method. set "spacy" for unigram paraphrasing')
+    parser.add_argument('--spacy_data', default='spacy_data', help='location of spacy NLP model')
 
     parser.add_argument('--batch_size', default=10, type=int)
 
