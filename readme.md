@@ -77,6 +77,26 @@ $ th train.lua
 
 with the default parameter, this will take several hours on a sinlge Tesla k40 GPU, and will generate the model under `model/save/`
 
+### Reference
+
+If you use this code as part of any published research, please acknowledge the following paper
+
+@InProceedings{Antol_2015_arxiv,
+author = {Antol, Stanislaw and Agrawal, Aishwarya and Lu, Jiasen and Mitchell, Margaret and Batra, Dhruv and Lawrence Zitnick, C. and Parikh, Devi},
+title = {VQA: Visual Question Answering},
+journal = {arXiv preprint arXiv:1505.00468},
+year = {2015}
+}
+
+If you use the VQA dataset as part of any published research, please acknowledge the following paper
+
+@InProceedings{Antol_2015_ICCV,
+author = {Antol, Stanislaw and Agrawal, Aishwarya and Lu, Jiasen and Mitchell, Margaret and Batra, Dhruv and Lawrence Zitnick, C. and Parikh, Devi},
+title = {VQA: Visual Question Answering},
+booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+month = {December},
+year = {2015}
+}
 
 ### License
 
