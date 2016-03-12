@@ -83,7 +83,7 @@ If you use this code as part of any published research, please acknowledge the f
 ```
 @misc{Lu2015
 author = {Jiasen Lu, Xiao Lin, Dhruv Batra and Devi Parikh},
-title = {deeper LSTM and normalized CNN Visual Question Answering model},
+title = {Deeper LSTM and normalized CNN Visual Question Answering model},
 year = {2015},
 publisher = {GitHub},
 journal = {GitHub repository},
