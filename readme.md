@@ -79,7 +79,7 @@ with the default parameter, this will take several hours on a sinlge Tesla k40 G
 
 ### Reference
 
-If you use this code as part of any published research, please acknowledge the following paper
+If you use this code as part of any published research, please acknowledge the following repo
 ```
 @misc{Lu2015
 author = {Jiasen Lu, Xiao Lin, Dhruv Batra and Devi Parikh},
