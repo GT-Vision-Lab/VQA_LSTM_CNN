@@ -81,7 +81,7 @@ with the default parameter, this will take several hours on a sinlge Tesla k40 G
 
 If you use this code as part of any published research, please acknowledge the following repo
 ```
-@misc{Lu2015
+@misc{Lu2015,
 author = {Jiasen Lu, Xiao Lin, Dhruv Batra and Devi Parikh},
 title = {Deeper LSTM and normalized CNN Visual Question Answering model},
 year = {2015},
