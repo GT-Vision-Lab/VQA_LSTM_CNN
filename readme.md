@@ -82,7 +82,7 @@ with the default parameter, this will take several hours on a sinlge Tesla k40 G
 If you use this code as part of any published research, please acknowledge the following repo
 ```
 @misc{Lu2015,
-author = {Jiasen Lu, Xiao Lin, Dhruv Batra and Devi Parikh},
+author = {Jiasen Lu and Xiao Lin and Dhruv Batra and Devi Parikh},
 title = {Deeper LSTM and normalized CNN Visual Question Answering model},
 year = {2015},
 publisher = {GitHub},
@@ -94,7 +94,7 @@ commit = {6c91cb9}
 If you use the VQA dataset as part of any published research, please acknowledge the following paper
 ```
 @InProceedings{Antol_2015_ICCV,
-author = {Antol, Stanislaw and Agrawal, Aishwarya and Lu, Jiasen and Mitchell, Margaret and Batra, Dhruv and Lawrence Zitnick, C. and Parikh, Devi},
+author = {Stanislaw Antol and Aishwarya Agrawal and Jiasen Lu and Margaret Mitchell and Dhruv Batra and C. Lawrence Zitnick and Devi Parikh},
 title = {VQA: Visual Question Answering},
 booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
 month = {December},
