@@ -2,6 +2,7 @@
 
 Train a deeper LSTM and normalized CNN Visual Question Answering model. This current code can get **58.16** on Open-Ended and **63.09** on Multiple-Choice on **test-standard** split. You can check [Codalab leaderboard](https://competitions.codalab.org/competitions/6961#results) for more details.
 
+**New VQA Model with better performance and cleaner code can be found here [https://github.com/jiasenlu/HieCoAttenVQA](https://github.com/jiasenlu/HieCoAttenVQA)**
 
 ### Requirements
 
